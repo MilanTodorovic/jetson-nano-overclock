@@ -1,3 +1,4 @@
+# This file is here for archival purposes. All of the changes are already preapplied inside the overclocked kernel folder.
 --- a/kernel/kernel-4.9/drivers/soc/tegra/tegra210-core-dvfs.c
 +++ b/kernel/kernel-4.9/drivers/soc/tegra/tegra210-core-dvfs.c
 @@ -89,9 +89,9 @@ static struct dvfs core_dvfs_table[] = {
