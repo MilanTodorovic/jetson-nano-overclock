@@ -1,2 +1,7 @@
-# jetson_nano_overclock
-Kernel for nvidia jetson nano with some changes in dvfs for enable higher speed (2,0ghz+ and GPU 1,0ghz)
+# Jetson Nano - CPU, GPU and NVDEC overclock
+
+This is a fork for personal use. All changes aren't meant for the general public.  
+The default branch provides an overclock to the CPU, GPU and NVDEC.  
+The CPU will run at 2GHz stable, GPU at 1Ghz and the NVDEC at 844Mhz.  
+
+Since this is an extreme overclock branch, pushing the CPU over 2GHz, the maximum supported (as per some forum posts) and recommended PSU is 5v 5a.
