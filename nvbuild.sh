@@ -98,7 +98,7 @@ function build_arm64_kernel_sources {
 	"${MAKE_BIN}" -C "${source_dir}" ARCH=arm64 \
 		LOCALVERSION="-tegra" \
 		CROSS_COMPILE="${CROSS_COMPILE_AARCH64}" \
-		"${O_OPT[@]}" "${config_file}"
+		"${O_OPT[@]}" -j"${NPROC}" "${config_file}"
 
 	"${MAKE_BIN}" -C "${source_dir}" ARCH=arm64 \
 		LOCALVERSION="-tegra" \
@@ -120,7 +120,7 @@ function build_arm64_kernel_sources {
 		
 	"${MAKE_BIN}" -C "${source_dir}" ARCH=arm64 \
 		LOCALVERSION="-tegra" \
-		"${O_OPT[@]}" \
+		"${O_OPT[@]}" -j"${NPROC}" \
 		INSTALL_MOD_PATH=$KERNEL_MODULES_OUT \
 		INSTALL_MOD_STRIP=1 modules_install
 
