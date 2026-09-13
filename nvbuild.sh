@@ -35,9 +35,9 @@ SCRIPT_DIR="$(dirname $(readlink -f "${0}"))"
 SCRIPT_NAME="$(basename "${0}")"
 
 # Compiling the kernel works with all versions of GCC, from 7.3.1 up to and including 9.2
-KERNEL_OUT_DIR="/home/jetson/Desktop/kernel_out/build_92"
-KERNEL_MODULES_OUT="/home/jetson/Desktop/kernel_out/modules_92"
-CROSS_COMPILE_AARCH64_PATH="/home/jetson/Desktop/gcc-9.2"
+KERNEL_OUT_DIR="/home/$USER/Desktop/kernel_out/build_92"
+KERNEL_MODULES_OUT="/home/$USER/Desktop/kernel_out/modules_92"
+CROSS_COMPILE_AARCH64_PATH="/home/$USER/Desktop/gcc-9.2"
 CROSS_COMPILE_AARCH64=$CROSS_COMPILE_AARCH64_PATH+"/bin/aarch64-linux-gnu-"
 
 source "${SCRIPT_DIR}/nvcommon_build.sh"
