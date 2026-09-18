@@ -5,3 +5,5 @@ There is a `patches` directory which contains the patches which were applied to 
 The default branch provides an overclock to the CPU, GPU and NVDEC.  
 The CPU will run at 2.2GHz stable, GPU at 1.15Ghz and the NVDEC at 844Mhz.  
 Since this is an extreme overclock branch, pushing the CPU over 2GHz, the maximum supported (as per some forum posts) and recommended PSU is 5v 5a.  
+  
+Thanks to https://www.sevarg.net/2019/04/14/nvidia-jetson-nano-desktop-use-kernel-builds/ for instructions on how to enable and patch ZSWAP.
