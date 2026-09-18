@@ -1022,7 +1022,13 @@ static void zswap_fill_page(void *ptr, unsigned long value)
 	unsigned long *page;
 
 	page = (unsigned long *)ptr;
-	memset_l(page, value, PAGE_SIZE / sizeof(unsigned long));
+	/***************************************************************************** 
+	https://www.sevarg.net/2019/04/14/nvidia-jetson-nano-desktop-use-kernel-builds/
+	There’s a call in there that relies on a kernel feature that doesn’t yet exist in 4.9.  
+	A memset_l call, which is an optimized memset.  No problem - we can replace it with the regular memset.  
+	You can make the edit in vim, or use the handy one-liner here to swap it for a functionally identical memset. 
+	******************************************************************************/
+	memset(page, value, PAGE_SIZE);
 }
 
 /*********************************
